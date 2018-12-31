@@ -1,0 +1,138 @@
+[
+  {
+    "title": "a Card",
+    "content": "<p>內容AAAAA</p>",
+    "buttons": [
+      {
+        "name": "按鈕",
+        "icon": "home",
+        "router": true,
+        "link": "//www.hypernite.com",
+        "color": "primary"
+      },
+      {
+        "name": "按鈕2",
+        "icon": "games",
+        "router": false,
+        "link": "//www.hypernite.com",
+        "color": "red"
+      }
+    ],
+    "flex": [
+      {
+        "size": "xs6",
+        "box": [
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "content_color": "red",
+            "title_text_color": "white"
+          },
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "title_text_color": "blue",
+            "content_color": "white"
+          }
+        ]
+      },
+      {
+        "size": "xs6",
+        "box": [
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "content_color": "white",
+            "title_text_color": "white"
+          },
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "content_color": "white",
+            "title_text_color": "white"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "a Card without flex box",
+    "content": "<p>內容AAAAA</p>",
+    "buttons": [
+      {
+        "name": "按鈕",
+        "icon": "home",
+        "router": true,
+        "link": "//www.hypernite.com",
+        "color": "primary"
+      },
+      {
+        "name": "按鈕2",
+        "icon": "games",
+        "router": false,
+        "link": "//www.hypernite.com",
+        "color": "red"
+      }
+    ],
+    "flex": [
+    ]
+  },
+  {
+    "title": "a Card without buttons",
+    "content": "<p>內容AAAAA</p>",
+    "buttons": [
+    ],
+    "flex": [
+      {
+        "size": "xs6",
+        "box": [
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "content_color": "white",
+            "title_text_color": "white"
+          },
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "content_color": "white",
+            "title_text_color": "white"
+          }
+        ]
+      },
+      {
+        "size": "xs6",
+        "box": [
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "content_color": "white",
+            "title_text_color": "white"
+          },
+          {
+            "flat": false,
+            "title": "title",
+            "content": "<p>content</p>",
+            "title_color": "black",
+            "content_color": "white",
+            "title_text_color": "white"
+          }
+        ]
+      }
+    ]
+  }
+]

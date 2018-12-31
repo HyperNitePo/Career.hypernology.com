@@ -57,13 +57,13 @@
                 buttons: [
                     {
                         icon: 'home',
-                        name: 'Home',
+                        name: '首頁',
                         goto: '/'
                     },
                     {
                         icon: 'build',
-                        name: 'button1',
-                        goto: '/button1'
+                        name: '開始申請',
+                        goto: '/apply'
                     },
                     {
                         icon: 'games',
