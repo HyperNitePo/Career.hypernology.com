@@ -15,7 +15,7 @@
 
 <script>
     export default {
-        name: "Footer"
+        chname: "Footer"
     }
 </script>
 

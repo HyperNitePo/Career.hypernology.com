@@ -4,14 +4,14 @@
     "content": "<p>內容AAAAA</p>",
     "buttons": [
       {
-        "name": "按鈕",
+        "chname": "按鈕",
         "icon": "home",
         "router": true,
         "link": "//www.hypernite.com",
         "color": "primary"
       },
       {
-        "name": "按鈕2",
+        "chname": "按鈕2",
         "icon": "games",
         "router": false,
         "link": "//www.hypernite.com",
@@ -27,7 +27,7 @@
             "title": "title",
             "content": "<p>content</p>",
             "title_color": "black",
-            "content_color": "red",
+            "content_color": "white",
             "title_text_color": "white"
           },
           {
@@ -68,14 +68,14 @@
     "content": "<p>內容AAAAA</p>",
     "buttons": [
       {
-        "name": "按鈕",
+        "chname": "按鈕",
         "icon": "home",
         "router": true,
         "link": "//www.hypernite.com",
         "color": "primary"
       },
       {
-        "name": "按鈕2",
+        "chname": "按鈕2",
         "icon": "games",
         "router": false,
         "link": "//www.hypernite.com",

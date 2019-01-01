@@ -18,7 +18,7 @@
               <v-icon>{{button.icon}}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>{{button.name}}</v-list-tile-title>
+                <v-list-tile-title>{{button.chname}}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
         </template>
@@ -30,7 +30,9 @@
           <v-toolbar-title class="font-weight-light headline"></v-toolbar-title>
           <template v-if="$vuetify.breakpoint.mdAndUp">
               <template v-for="(button,index) in buttons">
-                  <router-link :key="index" :to="button.goto"><v-btn flat >{{button.name}}</v-btn></router-link>
+                  <router-link :key="index" :to="button.goto">
+                      <v-btn flat>{{button.chname}}</v-btn>
+                  </router-link>
               </template>
               <v-spacer></v-spacer>
               <v-btn flat href="//www.hypernite.com">返回主頁</v-btn>
@@ -46,7 +48,7 @@
     import global from './global-func'
     import Footer from './components/Footer'
     export default {
-        name: 'App',
+        chname: 'App',
         components: {
             Footer
         },
@@ -57,17 +59,17 @@
                 buttons: [
                     {
                         icon: 'home',
-                        name: '首頁',
+                        chname: '首頁',
                         goto: '/'
                     },
                     {
                         icon: 'build',
-                        name: '開始申請',
+                        chname: '開始申請',
                         goto: '/apply'
                     },
                     {
                         icon: 'games',
-                        name: 'button2',
+                        chname: 'button2',
                         goto: '/about'
                     },
                 ]

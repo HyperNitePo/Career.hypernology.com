@@ -23,7 +23,7 @@
                 <v-divider></v-divider>
             </div>
         </v-flex>
-            <v-flex class="pa-2" xs7>
+            <v-flex class="pa-2" xs9>
                 <v-card :key="i" class="mb-3" v-for="(h,i) in home">
                     <v-card-title class="black white--text title">{{h.title}}</v-card-title>
                 <v-card-text>
@@ -42,7 +42,7 @@
                     <template v-for="(btn,ind) in h.buttons">
                         <v-btn :class="btn.color" :href="btn.link" :key="ind" :to="(btn.router ? btn.link : '' )">
                             <v-icon left>{{btn.icon}}</v-icon>
-                            {{btn.name}}
+                            {{btn.chname}}
                         </v-btn>
                     </template>
                 </v-card-text>
@@ -57,7 +57,7 @@
     import content from '../../public/json/home'
 
     export default {
-        name: "Home",
+        chname: "Home",
         data(){
             return{
                 test: 5,
