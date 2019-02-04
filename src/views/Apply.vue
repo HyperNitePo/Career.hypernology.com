@@ -1,5 +1,7 @@
 <template>
-    <v-container pl-5 pr-5>
+    <v-content class="pa-0">
+        <BackGround img="https://career.hypernology.com/img/3dev.jpg" subtitle="加入我們" title="Apply for Us"></BackGround>
+        <v-container>
         <v-card>
             <v-stepper v-model="step">
                 <v-stepper-header>
@@ -129,20 +131,24 @@
                                                           append-icon="phone" label="電話號碼" mask="(+###)###############"
                                                           required v-model="form.phone"></v-text-field>
                                         </v-flex>
-                                        <v-flex xs12>
+                                        <v-flex xs3>
                                             <h2 class="font-weight-light title">性別</h2><span class="error--text"
                                                                                              v-if="form.sex.length === 0">(必填)</span>
                                             <v-radio-group :rules="rules" v-model="form.sex">
                                                 <v-radio label="男" value="boy"></v-radio>
                                                 <v-radio label="女" value="girl"></v-radio>
                                             </v-radio-group>
+                                            <v-text-field
+                                                    :rules="[v => v.length !== 0 || '此欄為必填', v => v.toString().includes('@') || '電子郵件格式不正確']"
+                                                    label="電子郵件" required v-model="form.email"></v-text-field>
                                         </v-flex>
                                     </v-layout>
                                 </v-form>
                             </v-card-text>
                             <v-card-actions>
                                 <v-btn @click="step--" class="warning" v-if="step > 1">上一頁</v-btn>
-                                <v-btn disabled v-if="!valid || form.sex.length === 0 || form.phone.length < 10">
+                                <v-btn disabled
+                                       v-if="!valid || form.sex.length === 0 || form.phone.length < 10 || !form.email.includes('@')">
                                     你尚未填寫完成
                                 </v-btn>
                                 <v-btn @click="step++" class="primary" v-else-if="step < 4">下一頁</v-btn>
@@ -200,14 +206,17 @@
             </v-stepper>
         </v-card>
     </v-container>
+    </v-content>
 </template>
 
 <script>
     import departs from '../../public/json/departments'
     import global from '../global-func'
+    import BackGround from "../components/BackGround";
 
     export default {
         name: "Apply",
+        components: {BackGround},
         data() {
             return {
                 valid: false,
@@ -227,7 +236,8 @@
                     age: 15,
                     phone: '',
                     contact: '',
-                    contact_id: ''
+                    contact_id: '',
+                    email: ''
                 },
                 departs: departs,
                 step: 0,
@@ -265,12 +275,14 @@
                         age: this.form.age,
                         sex: this.form.sex,
                         contact_method: this.form.contact,
-                        contact_id: this.form.contact_id
+                        contact_id: this.form.contact_id,
+                        email: this.form.email
                     }
-                }).then(() => {
+                }).then(res => {
                     this.submitting = false;
                     this.step = 5;
-                    this.gfunc.setCookie("hypernite_form_submitted", true, 7)
+                    window.alert('中文名: ' + res.data.chinese_name + '\n' + '英文名: ' + res.data.english_name + '\n' + '日期: ' + res.data.date + '\n' + '電話號碼: ' + res.data.phone);
+                    this.gfunc.setCookie("hypernite_form_submitted", true, 0)
                 }).catch(err => {
                     this.submitting = false;
                     this.error = err;

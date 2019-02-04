@@ -28,19 +28,13 @@
           <v-toolbar-side-icon  @click.stop="nav = !nav" class="hidden-md-and-up"><v-icon>menu</v-icon></v-toolbar-side-icon>
           <v-img src="/img/headlogo/HNlogo.png" alt="HyperNite" max-width="90px" max-height="40px"></v-img>
           <v-toolbar-title class="font-weight-light headline"></v-toolbar-title>
-          <template v-if="$vuetify.breakpoint.mdAndUp">
-              <template v-for="(button,index) in buttons">
-                  <router-link :key="index" :to="button.goto">
-                      <v-btn flat>{{button.chname}}</v-btn>
-                  </router-link>
-              </template>
+          <template v-if="!isMobile">
+              <v-btn :key="index" :to="button.goto" flat v-for="(button,index) in buttons">{{button.chname}}</v-btn>
               <v-spacer></v-spacer>
               <v-btn flat href="//www.hypernite.com">返回主頁</v-btn>
           </template>
       </v-toolbar>
-      <v-content>
-          <router-view></router-view>
-      </v-content>
+      <router-view></router-view>
       <Footer></Footer>
   </v-app>
 </template>
@@ -51,6 +45,13 @@
         chname: 'App',
         components: {
             Footer
+        },
+        computed: {
+            isMobile() {
+                const mobile = this.$vuetify.breakpoint.mdAndDown;
+                this.$store.commit('setMobile', mobile);
+                return mobile
+            }
         },
         data (){
             return {
