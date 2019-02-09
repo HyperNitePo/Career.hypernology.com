@@ -13,6 +13,6 @@ HyperNology 招募網站
 
 ## 演示
 
-![showcase](https://youtu.be/y2dt9ceu4aw)
+[![showcase](https://src.png)](https://youtu.be/y2dt9ceu4aw)
 
 
