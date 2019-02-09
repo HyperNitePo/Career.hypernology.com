@@ -11,4 +11,8 @@ HyperNology 招募網站
 
 ![test4](https://gyazo.com/08403d958e7acc027242b4d32ff01cfc.gif)
 
+## 演示
+
+![showcase](https://youtu.be/y2dt9ceu4aw)
+
 
