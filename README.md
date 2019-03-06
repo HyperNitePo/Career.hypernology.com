@@ -11,6 +11,10 @@ HyperNology 招募網站
 
 ![test4](https://gyazo.com/08403d958e7acc027242b4d32ff01cfc.gif)
 
+![test4](https://gyazo.com/b7304fd91a1ba873299b4c723ec8c4b7.png)
+
+![test5](https://gyazo.com/fa100603fea49d5dd8252004ee06998a.gif)
+
 ## 演示
 
 [![showcase](https://img.youtube.com/vi/y2dt9ceu4aw/0.jpg)](https://youtu.be/y2dt9ceu4aw)
