@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "fab fa-youtube",
+    "link": "//www.youtube.com/caxcraftblank",
+    "color": "red darken-1"
+  },
+  {
+    "icon": "fab fa-facebook-square",
+    "link": "//www.facebook.com/hyperniteltd",
+    "color": "primary darken-1"
+  },
+  {
+    "icon": "mail",
+    "link": "//mailto:info@hyeprnite.com",
+    "color": "white"
+  }
+]

@@ -6,6 +6,7 @@
         <Reason color="grey lighten-2"></Reason>
         <Statistic color=""></Statistic>
         <Recruit color="grey darken-4 white--text"></Recruit>
+        <Links color="grey lighten-3"></Links>
     </v-content>
 </template>
 
@@ -15,9 +16,10 @@
     import Reason from "../components/home/Reason";
     import Statistic from "../components/home/Statistic";
     import Recruit from "../components/home/Recruit";
+    import Links from "../components/home/Links";
 
     export default {
-        components: {Recruit, Statistic, Reason, BackGround, History},
+        components: {Links, Recruit, Statistic, Reason, BackGround, History},
         chname: "Home",
         data(){
             return{

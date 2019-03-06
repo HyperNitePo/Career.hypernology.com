@@ -210,7 +210,6 @@
 </template>
 
 <script>
-    import departs from '../../public/json/departments'
     import global from '../global-func'
     import BackGround from "../components/BackGround";
 
@@ -239,7 +238,7 @@
                     contact_id: '',
                     email: ''
                 },
-                departs: departs,
+                departs: [],
                 step: 0,
                 error: ''
             }
@@ -294,6 +293,10 @@
             if (this.gfunc.getCookie("hypernite_form_submitted")) {
                 this.step = 5;
             }
+        },
+        beforeMount() {
+            const departs = import('../../public/json/departments');
+            fetch('/json/departments.json').then(r => r.json()).then(data => this.departs = data).catch(() => this.departs = departs);
         }
     }
 </script>

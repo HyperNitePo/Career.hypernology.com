@@ -52,7 +52,8 @@
             }
         },
         beforeMount() {
-            fetch("/json/history.json").then(r => r.json()).then(data => this.history = data)
+            const his = import('../../../public/json/history');
+            fetch("/json/history.json").then(r => r.json()).then(data => this.history = data).catch(() => this.history = his);
         }
     }
 </script>

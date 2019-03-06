@@ -35,7 +35,7 @@
           </template>
       </v-toolbar>
       <router-view></router-view>
-      <Footer></Footer>
+      <Footer class="mt-5"></Footer>
   </v-app>
 </template>
 <script>
@@ -78,3 +78,8 @@
         }
     }
 </script>
+<style>
+    * {
+        font-family: "Microsoft JhengHei", monospace;
+    }
+</style>
